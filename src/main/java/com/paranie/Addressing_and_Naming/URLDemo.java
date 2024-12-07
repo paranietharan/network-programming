@@ -1,8 +1,8 @@
 package com.paranie.Addressing_and_Naming;
 
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.io.IOException;
+import java.net.*;
 
 public class URLDemo {
     public static void main(String[] args) {
@@ -16,8 +16,8 @@ public class URLDemo {
             System.out.println("Query: " + url.getQuery());
             System.out.println("Fragment (Ref): " + url.getRef());
             System.out.println("Authority: " + url.getAuthority());
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
+        }  catch (MalformedURLException e) {
+            System.err.println("Invalid URL format: " + e.getMessage());
         }
     }
 }
